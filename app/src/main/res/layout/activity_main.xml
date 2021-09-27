@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E2EEF8"
+    android:backgroundTint="#004F7CAC"
+    android:backgroundTintMode="src_atop"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine3"
+        android:layout_width="413dp"
+        android:layout_height="82dp"
+        android:background="#00000000"
+        android:ems="10"
+        android:fontFamily="@font/baloo_bhai"
+        android:gravity="center_horizontal"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:text="For those looking for a place to grind out their homework" />
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#ACD4FF"
+        android:fontFamily="@font/baloo_bhai"
+        android:shadowColor="#4F7CAC"
+        android:shadowDx="1"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:text="@string/study_rooms"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.363"
+        app:strokeColor="#4F7CAC" />
+
+    <Button
+        android:id="@+id/button_second"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#ACD4FF"
+        android:fontFamily="@font/baloo_bhai"
+        android:shadowColor="#4F7CAC"
+        android:shadowDx="1"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:text="@string/entertainment"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="418dp"
+        android:layout_height="82dp"
+        android:background="#00000000"
+        android:ems="10"
+        android:fontFamily="@font/baloo_bhai"
+        android:gravity="center_horizontal"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.816"
+        tools:text="For those looking for on-campus fun" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hf3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.046"
+        android:contentDescription="@string/logo"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

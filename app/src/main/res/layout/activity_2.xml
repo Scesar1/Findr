@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/volume"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView">
+
+                <RadioButton
+                    android:id="@+id/rbNoVolume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp" />
+
+                <RadioButton
+                    android:id="@+id/rbVolume1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp" />
+
+                <RadioButton
+                    android:id="@+id/rbVolume2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp" />
+
+                <RadioButton
+                    android:id="@+id/rbVolume3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageNoVolume"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_toRightOf="@+id/rgVolume"
+                android:layout_below="@id/textView"
+                android:src="@drawable/no_volume" />
+
+            <ImageView
+                android:id="@+id/imageVolume1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="145dp"
+                android:layout_toRightOf="@+id/rgVolume"
+                android:layout_below="@id/textView"
+                android:src="@drawable/volume1" />
+
+            <ImageView
+                android:id="@+id/imageVolume2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="245dp"
+                android:layout_below="@id/textView"
+                android:layout_toRightOf="@+id/rgVolume"
+                android:src="@drawable/volume2" />
+
+            <ImageView
+                android:id="@+id/imageVolume3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="345dp"
+                android:layout_below="@id/textView"
+                android:layout_toRightOf="@+id/rgVolume"
+                android:src="@drawable/volume3" />
+
+            <TextView
+                android:id="@+id/txtEquipment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rgVolume"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/equipment"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkboxComputer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtEquipment"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="Computers" />
+
+            <CheckBox
+                android:id="@+id/checkboxProjector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkboxComputer"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="Projectors" />
+
+            <CheckBox
+                android:id="@+id/checkboxWhiteboards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkboxProjector"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="Whiteboards" />
+
+            <CheckBox
+                android:id="@+id/checkboxPrinters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkboxWhiteboards"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:text="Printers/Copiers" />
+
+            <TextView
+                android:id="@+id/txtFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkboxPrinters"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/refood"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtFood"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/rbNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:text="No" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgFood"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:text="@string/privacy"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rgPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textPrivacy">
+
+                <RadioButton
+                    android:id="@+id/rbNoPrivacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/lowpriv"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/rbPrivacy1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/aloneishpriv"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/rbPrivacy2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/alonepriv"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/rbPrivacy3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:textSize="20sp"
+                    android:text="@string/privat"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rgPrivacy"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:text="Submit"
+                android:backgroundTint="@color/design_default_color_secondary"
+                android:textSize="40sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
