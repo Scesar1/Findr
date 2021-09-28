@@ -5,10 +5,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 
 public class Activity3 extends AppCompatActivity {
+
+
 
     boolean[] equipment = new boolean[4]; // {computers, projectors, whiteboards, printers}
     boolean[] noEquipment = {/*computers*/ false, /*projectors*/ false, /*whiteboards*/ false, /*printers*/ false};
@@ -111,6 +116,9 @@ public class Activity3 extends AppCompatActivity {
 
         locationsRecView.setAdapter(adapter);
         locationsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+
+
 
     }
 }
