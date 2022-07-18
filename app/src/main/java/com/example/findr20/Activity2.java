@@ -20,6 +20,57 @@ public class Activity2 extends AppCompatActivity {
     private CheckBox checkBoxComputers, checkBoxProjectors, checkBoxWhiteboards, checkBoxPrinters;
     private RadioGroup rgVolume, rgFood, rgPrivacy;
 
+
+
+    static int desiredPrivacy;
+    static int desiredHygiene;
+    static int desiredSeating;
+    static int desiredVolume;
+    static boolean[] equipmentDesired;
+    static boolean foodDesired;
+
+    public static int getDesiredPrivacy() {
+        return desiredPrivacy;
+    }
+
+    public void setDesiredPrivacy(int desiredPrivacy) {
+        this.desiredPrivacy = desiredPrivacy;
+    }
+
+    public int getDesiredSeating() {
+        return desiredSeating;
+    }
+
+    public void setDesiredSeating(int desiredSeating) {
+        this.desiredSeating = desiredSeating;
+    }
+
+    public static int getDesiredVolume() {
+        return desiredVolume;
+    }
+
+    public void setDesiredVolume(int desiredVolume) {
+        this.desiredVolume = desiredVolume;
+    }
+
+    public static boolean[] getEquipmentDesired() {
+        return equipmentDesired;
+    }
+
+    public void setEquipmentDesired(boolean[] equipmentDesired) {
+        this.equipmentDesired = equipmentDesired;
+    }
+
+    public static boolean isFoodDesired() {
+        return foodDesired;
+    }
+
+    public void setFoodDesired(boolean foodDesired) {
+        this.foodDesired = foodDesired;
+    }
+
+
+
     boolean[] selectedEquipment;
     boolean[] noEquipment = {/*computers*/ false, /*projectors*/ false, /*whiteboards*/ false, /*printers*/ false};
     boolean[] justWhiteboard = {false, false, true, false};
@@ -49,14 +100,12 @@ public class Activity2 extends AppCompatActivity {
         rgFood = findViewById(R.id.rgFood);
         rgPrivacy = findViewById(R.id.rgPrivacy);
 
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivity3();
-                selectedEquipment = compareEquipmentList(equipment);
-                for(int i = 0; i < selectedEquipment.length; i++) {
-                    System.out.println(Arrays.toString(selectedEquipment));
-                }
+        submit.setOnClickListener(view -> {
+            openActivity3();
+            selectedEquipment = compareEquipmentList(equipment);
+            setEquipmentDesired(selectedEquipment);
+            for(int i = 0; i < selectedEquipment.length; i++) {
+                System.out.println(Arrays.toString(selectedEquipment));
             }
         });
 
@@ -116,15 +165,19 @@ public class Activity2 extends AppCompatActivity {
                 switch (i) {
                     case R.id.rbNoVolume:
                         Toast.makeText(Activity2.this, "No Volume", Toast.LENGTH_SHORT).show();
+                        setDesiredVolume(0);
                         break;
                     case R.id.rbVolume1:
                         Toast.makeText(Activity2.this, "Volume 1", Toast.LENGTH_SHORT).show();
+                        setDesiredVolume(1);
                         break;
                     case R.id.rbVolume2:
                         Toast.makeText(Activity2.this, "Volume 2", Toast.LENGTH_SHORT).show();
+                        setDesiredVolume(2);
                         break;
                     case R.id.rbVolume3:
                         Toast.makeText(Activity2.this, "Volume 3", Toast.LENGTH_SHORT).show();
+                        setDesiredVolume(3);
                         break;
                     default:
                         break;
@@ -138,9 +191,11 @@ public class Activity2 extends AppCompatActivity {
                 switch (i) {
                     case R.id.rbNo:
                         Toast.makeText(Activity2.this, "No", Toast.LENGTH_SHORT).show();
+                        setFoodDesired(false);
                         break;
                     case R.id.rbYes:
                         Toast.makeText(Activity2.this, "Yes", Toast.LENGTH_SHORT).show();
+                        setFoodDesired(true);
                         break;
                     default:
                         break;
@@ -154,15 +209,19 @@ public class Activity2 extends AppCompatActivity {
                 switch (i) {
                     case R.id.rbNoPrivacy:
                         Toast.makeText(Activity2.this, "No Privacy", Toast.LENGTH_SHORT).show();
+                        setDesiredPrivacy(0);
                         break;
                     case R.id.rbPrivacy1:
                         Toast.makeText(Activity2.this, "Privacy 1", Toast.LENGTH_SHORT).show();
+                        setDesiredPrivacy(1);
                         break;
                     case R.id.rbPrivacy2:
                         Toast.makeText(Activity2.this, "Privacy 2", Toast.LENGTH_SHORT).show();
+                        setDesiredPrivacy(2);
                         break;
                     case R.id.rbPrivacy3:
                         Toast.makeText(Activity2.this, "Privacy 3", Toast.LENGTH_SHORT).show();
+                        setDesiredPrivacy(3);
                         break;
                     default:
                         break;
@@ -213,4 +272,5 @@ public class Activity2 extends AppCompatActivity {
         boolean[] equipmentArr = {equipment.get(0), equipment.get(1), equipment.get(2), equipment.get(3)};
         return equipmentArr;
     }
+
 }

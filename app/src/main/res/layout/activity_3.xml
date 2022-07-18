@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity3"
-    android:padding="10dp">
+    android:padding="0dp"
+    android:backgroundTint="#004F7CAC">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/locationsRecView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:id="@+id/locationsRecView"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        />
 
 </RelativeLayout>

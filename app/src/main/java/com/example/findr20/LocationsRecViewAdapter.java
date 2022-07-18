@@ -18,9 +18,11 @@ import java.util.ArrayList;
 public class LocationsRecViewAdapter extends RecyclerView.Adapter<LocationsRecViewAdapter.ViewHolder>{
 
     private ArrayList<Location> locations = new ArrayList<>();
+    private int[] images;
 
-    public LocationsRecViewAdapter(Context context) {
+    public LocationsRecViewAdapter(Context context, int[] images) {
         this.context = context;
+        this.images = images;
     }
 
     private Context context;
@@ -35,7 +37,7 @@ public class LocationsRecViewAdapter extends RecyclerView.Adapter<LocationsRecVi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.txtLocation.setText(locations.get(position).getName());
+        holder.image.setImageResource(locations.get(position).getImageId());
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,12 +57,10 @@ public class LocationsRecViewAdapter extends RecyclerView.Adapter<LocationsRecVi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView txtLocation;
         private CardView parent;
         private ImageView image;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtLocation = itemView.findViewById(R.id.txtLocation);
             parent = itemView.findViewById(R.id.parent);
             image = itemView.findViewById(R.id.image);
         }

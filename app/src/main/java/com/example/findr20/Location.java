@@ -1,5 +1,8 @@
 package com.example.findr20;
 
+import android.net.Uri;
+
+import java.net.URI;
 import java.util.Objects;
 
 public class Location {
@@ -16,11 +19,11 @@ public class Location {
     protected boolean vendingFood;
     protected boolean rsvp;
     protected int volume;
-
+    public int imageId;
 
     public Location(String name, boolean jCardReq, boolean foodAllowed, boolean foodSold,
                     int hygiene, int seating, int openTime, int closingTime, int privacy,
-                    boolean vendingFood, boolean rsvp, int volume) {
+                    boolean vendingFood, boolean rsvp, int volume, int imageId) {
         this.setName(name);
         this.setjCardReq(jCardReq);
         this.setFoodAllowed(foodAllowed);
@@ -33,14 +36,25 @@ public class Location {
         this.setVendingFood(vendingFood);
         this.setRsvp(rsvp);
         this.setVolume(volume);
+        this.setImageId(imageId);
 
     }
+
+
 
     @Override
     public String toString() {
         return this.name;
     }
 
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
     public String getName() {
         return name;
     }
